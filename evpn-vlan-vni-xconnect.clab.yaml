@@ -1,0 +1,38 @@
+name: "evpn-xconn"
+prefix: "clab"
+
+topology:
+
+  kinds:
+    nokia_srlinux:
+      image: ghcr.io/nokia/srlinux:25.10.1
+    nokia_srsim:
+      image: ghcr.io/saogawa/nokia_srsim:25.10.R1
+      license: /home/clab/license/license-srsim25.txt
+
+  nodes:
+
+    ixr-d2l:
+      kind: nokia_srlinux
+      type: ixr-d2l
+      startup-config: clab-evpn-xconn/ixr-d2l/config/config.json
+
+    ixr-x:
+      kind: nokia_srsim
+      type: IXR-X
+      startup-config: clab-evpn-xconn/ixr-x/A/config/cf3/config.cfg
+      env:
+        NOKIA_SROS_SLOT: A
+        NOKIA_SROS_CARD: cpm-ixr-x
+    ixr-xs-1:
+      kind: nokia_srsim
+      type: IXR-X
+      network-mode: container:ixr-x
+      env:
+        NOKIA_SROS_SLOT: 1
+        NOKIA_SROS_CARD: imm6-qsfpdd+48-sfp56
+
+
+
+  links:
+    - endpoints: [ "ixr-x:1/1/c7/1", "ixr-d2l:e1-1" ]

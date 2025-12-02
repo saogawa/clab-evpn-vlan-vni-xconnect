@@ -1,0 +1,132 @@
+{
+  "name": "evpn-xconn",
+  "type": "clab",
+  "clab": {
+    "config": {
+      "prefix": "clab",
+      "mgmt": {
+        "network": "clab",
+        "bridge": "br-c2ca640bd1c0",
+        "ipv4-subnet": "172.20.20.0/24",
+        "ipv4-gw": "172.20.20.1",
+        "ipv6-subnet": "3fff:172:20:20::/64",
+        "ipv6-gw": "3fff:172:20:20::1",
+        "external-access": true
+      }
+    }
+  },
+  "ssh-pub-keys": ["ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIMDi5SnzbSkaU5DvCucMffxnKg7X9q6jaGVP22Yyklvf","ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQDS4+9mUDtdtJgKfmGiLEFtIXWLvZqGpPbw8LMcyOYA2IFNbg2GLODWRW/p73n2mWhWna9U+fYtLb/ReDOFGUOOR1XmMIX3gfRyiqZTnvz/m4cJlQPsWuzxS/bDunSAsEcdo9eVhOHu6yn+rxuZgzrE15yoc5uhHVQmj0RzbS0YPqN2f3KQ9A2W+oU+ie0WolGJA7aGVpL6na6UKpuoCz3rcBW44lRRRiXvgmm2zn+uy22qccPT/jN9sY70ncrfVODBW5Fj6DnNBaH8L7ViRPe3ZD/gCA7c7+Ncphv6xSIRkP2rNneZYBWvVYvSfnfwrWa9N4ShhbUwrHJFBfAzSB7a1ro1Pzr+InmX0Rhx9Y2kC0cHCzNHDXMXlvcp41jZK+rJgi9bfluJCaE+PgDAVEQjAvsKTqbExgsIYDNu7joVbtbpfkVLjPjwcZH0HfsQI9gTG0BabCNL4rdC+xKA8FPoKBWuFxM0fFU05jJjHK4K8w3x8HJ3PuJuthR7PExXwkxrkUYyv3uhDBdkFtdBqiYK6InZy09tkHNZ792emHglzkX4avl1Pfd935a66k0SK392F58BREKxe8zZWsSctSbsBLLPF/swHBpBSdsa20Kqjjgfqex6ic0jW2Pn36DOUQquNY30xLjE3P7ikFTUFbVMprYu9EB4Q+N0PsuK1PnyQQ=="],
+  "nodes": {
+    "ixr-d2l": {
+      "index": "0",
+      "shortname": "ixr-d2l",
+      "longname": "clab-evpn-xconn-ixr-d2l",
+      "fqdn": "ixr-d2l.evpn-xconn.io",
+      "group": "",
+      "labdir": "/home/clab/clab-evpn-vlan-vni-xconnect/clab-evpn-xconn/ixr-d2l",
+      "kind": "nokia_srlinux",
+      "image": "ghcr.io/nokia/srlinux:25.10.1",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.20.20.2",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "3fff:172:20:20::2",
+      "mgmt-ipv6-prefix-length": 64,
+      "mac-address": "1a:e1:00:00:00:00",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-c2ca640bd1c0",
+        "clab-node-group": "",
+        "clab-node-kind": "nokia_srlinux",
+        "clab-node-lab-dir": "/home/clab/clab-evpn-vlan-vni-xconnect/clab-evpn-xconn/ixr-d2l",
+        "clab-node-longname": "clab-evpn-xconn-ixr-d2l",
+        "clab-node-name": "ixr-d2l",
+        "clab-node-type": "ixr-d2l",
+        "clab-owner": "root",
+        "clab-topo-file": "/home/clab/clab-evpn-vlan-vni-xconnect/evpn-vlan-vni-xconnect.clab.yaml",
+        "containerlab": "evpn-xconn"
+      },
+      "port-bindings": [
+      ]
+    },
+    "ixr-x": {
+      "index": "1",
+      "shortname": "ixr-x",
+      "longname": "clab-evpn-xconn-ixr-x",
+      "fqdn": "ixr-x.evpn-xconn.io",
+      "group": "",
+      "labdir": "/home/clab/clab-evpn-vlan-vni-xconnect/clab-evpn-xconn/ixr-x",
+      "kind": "nokia_srsim",
+      "image": "ghcr.io/saogawa/nokia_srsim:25.10.R1",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.20.20.3",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "3fff:172:20:20::3",
+      "mgmt-ipv6-prefix-length": 64,
+      "mac-address": "1c:da:01:00:00:00",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-c2ca640bd1c0",
+        "clab-node-group": "",
+        "clab-node-kind": "nokia_srsim",
+        "clab-node-lab-dir": "/home/clab/clab-evpn-vlan-vni-xconnect/clab-evpn-xconn/ixr-x",
+        "clab-node-longname": "clab-evpn-xconn-ixr-x",
+        "clab-node-name": "ixr-x",
+        "clab-node-type": "IXR-X",
+        "clab-owner": "root",
+        "clab-topo-file": "/home/clab/clab-evpn-vlan-vni-xconnect/evpn-vlan-vni-xconnect.clab.yaml",
+        "containerlab": "evpn-xconn"
+      },
+      "port-bindings": [
+      ]
+    },
+    "ixr-xs-1": {
+      "index": "2",
+      "shortname": "ixr-xs-1",
+      "longname": "clab-evpn-xconn-ixr-xs-1",
+      "fqdn": "ixr-xs-1.evpn-xconn.io",
+      "group": "",
+      "labdir": "/home/clab/clab-evpn-vlan-vni-xconnect/clab-evpn-xconn/ixr-xs-1",
+      "kind": "nokia_srsim",
+      "image": "ghcr.io/saogawa/nokia_srsim:25.10.R1",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "",
+      "mgmt-ipv4-prefix-length": 0,
+      "mgmt-ipv6-address": "",
+      "mgmt-ipv6-prefix-length": 0,
+      "mac-address": "1c:74:02:00:00:00",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-c2ca640bd1c0",
+        "clab-node-group": "",
+        "clab-node-kind": "nokia_srsim",
+        "clab-node-lab-dir": "/home/clab/clab-evpn-vlan-vni-xconnect/clab-evpn-xconn/ixr-xs-1",
+        "clab-node-longname": "clab-evpn-xconn-ixr-xs-1",
+        "clab-node-name": "ixr-xs-1",
+        "clab-node-type": "IXR-X",
+        "clab-owner": "root",
+        "clab-topo-file": "/home/clab/clab-evpn-vlan-vni-xconnect/evpn-vlan-vni-xconnect.clab.yaml",
+        "containerlab": "evpn-xconn"
+      },
+      "port-bindings": [
+      ]
+    }
+  },
+  "links": [
+    {
+      "endpoints": {
+        "a": {
+          "node": "ixr-x",
+          "interface": "e1-1-c7-1",
+          "mac": "aa:c1:ab:04:b4:06",
+          "peer": "z"
+        },
+        "z": {
+          "node": "ixr-d2l",
+          "interface": "e1-1",
+          "mac": "aa:c1:ab:e5:c2:85",
+          "peer": "a"
+        }
+      }
+    }
+  ]
+}
