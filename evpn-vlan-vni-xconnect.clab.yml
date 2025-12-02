@@ -8,7 +8,7 @@ topology:
       image: ghcr.io/nokia/srlinux:25.10.1
     nokia_srsim:
       image: ghcr.io/saogawa/nokia_srsim:25.10.R1
-      license: /home/clab/license/license-srsim25.txt
+      license: license-srsim25.txt
 
   nodes:
 

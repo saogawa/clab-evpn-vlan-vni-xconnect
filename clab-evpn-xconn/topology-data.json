@@ -6,7 +6,7 @@
       "prefix": "clab",
       "mgmt": {
         "network": "clab",
-        "bridge": "br-c2ca640bd1c0",
+        "bridge": "br-27b4f0a1fb32",
         "ipv4-subnet": "172.20.20.0/24",
         "ipv4-gw": "172.20.20.1",
         "ipv6-subnet": "3fff:172:20:20::/64",
@@ -32,9 +32,9 @@
       "mgmt-ipv4-prefix-length": 24,
       "mgmt-ipv6-address": "3fff:172:20:20::2",
       "mgmt-ipv6-prefix-length": 64,
-      "mac-address": "1a:e1:00:00:00:00",
+      "mac-address": "1a:1b:00:00:00:00",
       "labels": {
-        "clab-mgmt-net-bridge": "br-c2ca640bd1c0",
+        "clab-mgmt-net-bridge": "br-27b4f0a1fb32",
         "clab-node-group": "",
         "clab-node-kind": "nokia_srlinux",
         "clab-node-lab-dir": "/home/clab/clab-evpn-vlan-vni-xconnect/clab-evpn-xconn/ixr-d2l",
@@ -42,7 +42,7 @@
         "clab-node-name": "ixr-d2l",
         "clab-node-type": "ixr-d2l",
         "clab-owner": "root",
-        "clab-topo-file": "/home/clab/clab-evpn-vlan-vni-xconnect/evpn-vlan-vni-xconnect.clab.yaml",
+        "clab-topo-file": "/home/clab/clab-evpn-vlan-vni-xconnect/evpn-vlan-vni-xconnect.clab.yml",
         "containerlab": "evpn-xconn"
       },
       "port-bindings": [
@@ -63,9 +63,9 @@
       "mgmt-ipv4-prefix-length": 24,
       "mgmt-ipv6-address": "3fff:172:20:20::3",
       "mgmt-ipv6-prefix-length": 64,
-      "mac-address": "1c:da:01:00:00:00",
+      "mac-address": "1c:65:01:00:00:00",
       "labels": {
-        "clab-mgmt-net-bridge": "br-c2ca640bd1c0",
+        "clab-mgmt-net-bridge": "br-27b4f0a1fb32",
         "clab-node-group": "",
         "clab-node-kind": "nokia_srsim",
         "clab-node-lab-dir": "/home/clab/clab-evpn-vlan-vni-xconnect/clab-evpn-xconn/ixr-x",
@@ -73,7 +73,7 @@
         "clab-node-name": "ixr-x",
         "clab-node-type": "IXR-X",
         "clab-owner": "root",
-        "clab-topo-file": "/home/clab/clab-evpn-vlan-vni-xconnect/evpn-vlan-vni-xconnect.clab.yaml",
+        "clab-topo-file": "/home/clab/clab-evpn-vlan-vni-xconnect/evpn-vlan-vni-xconnect.clab.yml",
         "containerlab": "evpn-xconn"
       },
       "port-bindings": [
@@ -94,9 +94,9 @@
       "mgmt-ipv4-prefix-length": 0,
       "mgmt-ipv6-address": "",
       "mgmt-ipv6-prefix-length": 0,
-      "mac-address": "1c:74:02:00:00:00",
+      "mac-address": "1c:86:02:00:00:00",
       "labels": {
-        "clab-mgmt-net-bridge": "br-c2ca640bd1c0",
+        "clab-mgmt-net-bridge": "br-27b4f0a1fb32",
         "clab-node-group": "",
         "clab-node-kind": "nokia_srsim",
         "clab-node-lab-dir": "/home/clab/clab-evpn-vlan-vni-xconnect/clab-evpn-xconn/ixr-xs-1",
@@ -104,7 +104,7 @@
         "clab-node-name": "ixr-xs-1",
         "clab-node-type": "IXR-X",
         "clab-owner": "root",
-        "clab-topo-file": "/home/clab/clab-evpn-vlan-vni-xconnect/evpn-vlan-vni-xconnect.clab.yaml",
+        "clab-topo-file": "/home/clab/clab-evpn-vlan-vni-xconnect/evpn-vlan-vni-xconnect.clab.yml",
         "containerlab": "evpn-xconn"
       },
       "port-bindings": [
@@ -117,13 +117,13 @@
         "a": {
           "node": "ixr-x",
           "interface": "e1-1-c7-1",
-          "mac": "aa:c1:ab:04:b4:06",
+          "mac": "aa:c1:ab:35:e5:8a",
           "peer": "z"
         },
         "z": {
           "node": "ixr-d2l",
           "interface": "e1-1",
-          "mac": "aa:c1:ab:e5:c2:85",
+          "mac": "aa:c1:ab:56:d7:de",
           "peer": "a"
         }
       }
